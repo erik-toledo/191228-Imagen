@@ -1,1 +1,0 @@
- imagenes = [img.link for img in cliente.get_album_images(id_album)]
