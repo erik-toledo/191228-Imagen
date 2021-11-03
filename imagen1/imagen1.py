@@ -30,7 +30,7 @@ def descarga_url_img(link):
  
 def main():
    id_album = "bUaCfoz"
-   imagenes = cliente.get_album_images(id_album)
+   imagenes = [img.link for img in cliente.get_album_images(id_album)]
    hilos = len(imagenes)
  
    with ThreadPoolExecutor (max_workers= hilos) as executor:

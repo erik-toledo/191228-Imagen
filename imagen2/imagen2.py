@@ -31,7 +31,7 @@ def descarga_url_img(link):
  
 def main():
    id_album = "bUaCfoz"
-   imagenes = cliente.get_album_images(id_album)
+   imagenes = [img.link for img in cliente.get_album_images(id_album)]
    proceso = len(imagenes)
  
    with Pool(processes=proceso) as pool:
